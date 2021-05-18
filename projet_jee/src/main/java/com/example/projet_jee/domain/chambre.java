@@ -14,10 +14,10 @@ public class chambre {
     private String dispo;
 
     @Column(name = "Nbr")
-    private static int nbr;
+    private static int nbr;   // nbre de chambre à reservé
 
     @Column(name = "Prix")
-    private static int prixNuité;
+    private static int prixNuité;     // prix de chambre par nuit
 
     public chambre() {
     }
