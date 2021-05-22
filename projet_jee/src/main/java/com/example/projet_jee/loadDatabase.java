@@ -22,8 +22,8 @@ class loadDatabase {
         return args -> {
             log.info("Preloading " + repository.save(new client("Ksouri","Lina","lina@gmail.com",
                     "soukra",23787323, LocalDate.of(1998, Month.JUNE,17))));
-            log.info("Preloading " + repository.save(new client("Attia","Siwar", "siwar@gmail.com",
-                    "ariana",50601409,LocalDate.of(1997, Month.NOVEMBER,22))));
+           // log.info("Preloading " + repository.save(new client("Attia","Siwar", "siwar@gmail.com",
+               //     "ariana",50601409,LocalDate.of(1997, Month.NOVEMBER,22))));
         };
     }
 }

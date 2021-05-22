@@ -11,8 +11,8 @@ import java.util.List;
 
 @Service
 public class chambreservice {
-    private final chambreRepo chambrerep;
     @Autowired
+    private final chambreRepo chambrerep;
     public chambreservice(chambreRepo chambrerep){this.chambrerep = chambrerep; }
     public chambre addchambre(@RequestBody chambre chambre) {
         return chambrerep.save(chambre);
@@ -27,7 +27,7 @@ public class chambreservice {
     }
     public chambre Updatechambre(chambre chambre) {  return chambrerep.save(chambre); }
 
-    public void deletereservation(int idC) {
+    /*public void deletechambre(int idC) {
         chambrerep.deletechambreByIdC(idC);
-    }
+    }*/
 }

@@ -10,13 +10,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-@Configuration
-@EnableAutoConfiguration(exclude = {DataSourceAutoConfiguration.class})
-@ComponentScan
-@SpringBootApplication
-@EnableTransactionManagement
-@EnableJpaRepositories
-@EntityScan("com.example.domain")
+@EnableAutoConfiguration
+@SpringBootApplication(scanBasePackages = {"com.example.projet-jee"})
 public class ProjetJeeApplication {
 	
 

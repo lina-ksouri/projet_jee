@@ -13,6 +13,7 @@ public class reservationservice {
 
     private final reservationRepo reservrep;
     @Autowired
+
     public reservationservice(reservationRepo reservrep){this.reservrep = reservrep; }
     public reservation addreservation(@RequestBody reservation reserv) {
         return reservrep.save(reserv);
@@ -23,13 +24,13 @@ public class reservationservice {
     }
     public reservation getreservByIdr(int idr1) {
 
-        return reservrep.findByIdR(idr1).orElseThrow(() -> new ReservationNotFoundException("reservation by ID " + idr1 + "was not found"));
+        return reservrep.findByIdr(idr1).orElseThrow(() -> new ReservationNotFoundException("reservation by ID " + idr1 + "was not found"));
     }
     public reservation UpdateReservation(reservation reserv) {  return reservrep.save(reserv); }
 
-    public void deletereservation(int idR1) {
-        reservrep.deletereservatinByIdR(idR1);
-    }
+    /*public void deletereservation(int idr) {
+        reservrep.deletereservationByIdr(idr);
+    }*/
 }
 
 
